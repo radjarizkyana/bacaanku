@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "939508688353",
+    "project_id": "bacaanku-app",
+    "storage_bucket": "bacaanku-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939508688353:android:2045c9e11210620ca95ea0",
+        "android_client_info": {
+          "package_name": "com.example.bacaanku"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3Ho4J29jiLdKTW-xdzJlo9b0mPDFhfCM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
