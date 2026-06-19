@@ -34,7 +34,6 @@ class _LoginScreenState extends State<LoginScreen> {
           padding: const EdgeInsets.all(24.0),
           child: Form(
             key: _formKey,
-            // 1. TAMBAHKAN SINGLE CHILD SCROLL VIEW DI SINI
             child: SingleChildScrollView( 
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -162,7 +161,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ],
               ),
-            ), // PENUTUP SINGLE CHILD SCROLL VIEW
+            ), 
           ),
         ),
       ),

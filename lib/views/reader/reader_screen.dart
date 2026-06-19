@@ -3,12 +3,12 @@ import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class ReaderScreen extends StatefulWidget {
   final String title;
-  final String pdfUrl; // TAMBAHAN: Menerima URL PDF secara dinamis
+  final String pdfUrl;
 
   const ReaderScreen({
     super.key,
     required this.title,
-    required this.pdfUrl, // Wajibkan parameter ini
+    required this.pdfUrl,
   });
 
   @override

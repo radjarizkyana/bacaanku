@@ -33,22 +33,19 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
       final user = context.read<AuthViewModel>().currentUser;
       if (user == null) throw Exception("User belum login");
 
-      // 1. Siapkan Data Nota Pesanan (Invoice)
       final orderData = {
         'userId': user.id,
         'invoiceId': 'INV-${DateTime.now().millisecondsSinceEpoch}',
         'title': widget.title,
         'price': widget.price,
         'paymentMethod': _selectedPaymentMethod,
-        'status': 'Berhasil', // Dalam dunia nyata, ini menunggu callback dari Midtrans/Xendit
-        'createdAt': FieldValue.serverTimestamp(), // Waktu server Firebase
-        'dateString': "${DateTime.now().day}-${DateTime.now().month}-${DateTime.now().year}", // Format tanggal sederhana
+        'status': 'Berhasil', 
+        'createdAt': FieldValue.serverTimestamp(), 
+        'dateString': "${DateTime.now().day}-${DateTime.now().month}-${DateTime.now().year}", 
       };
 
-      // 2. CREATE: Simpan ke Firestore di koleksi 'orders'
       await FirebaseFirestore.instance.collection('orders').add(orderData);
 
-      // 3. Navigasi ke Halaman Sukses
       if (mounted) {
         Navigator.pushReplacement(
           context,

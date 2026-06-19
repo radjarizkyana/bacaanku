@@ -53,7 +53,6 @@ class CustomBookCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // 1. RAHASIA ANTI-OVERFLOW: Gambar dibungkus Expanded
             Expanded(
               child: ClipRRect(
                 borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
@@ -61,7 +60,6 @@ class CustomBookCard extends StatelessWidget {
               ),
             ),
             
-            // 2. Teks Info Buku (Sangat Compact)
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 2),
               child: Column(
@@ -84,7 +82,6 @@ class CustomBookCard extends StatelessWidget {
               ),
             ),
 
-            // 3. Posisi Tombol Bookmark (Menempel di kanan bawah)
             Padding(
               padding: const EdgeInsets.only(right: 6, bottom: 6),
               child: Align(

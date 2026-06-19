@@ -39,15 +39,12 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
       if (user == null) return;
 
       try {
-        // MENGGUNAKAN set DENGAN merge: true
-        // Ini kunci agar data tersimpan meskipun dokumen user di Firestore belum terbuat sempurna
         await FirebaseFirestore.instance.collection('users').doc(user.id).set({
           'name': _nameController.text.trim(),
           'phoneNumber': _phoneController.text.trim(),
-          'email': user.email, // Memastikan email tetap tersimpan
+          'email': user.email, 
         }, SetOptions(merge: true));
         
-        // SINKRONISASI STATE ke ViewModel agar UI terupdate
         authVM.updateUser(
           _nameController.text.trim(), 
           _phoneController.text.trim(),

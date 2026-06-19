@@ -135,8 +135,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                                   _passwordController.text.trim(),
                                 );
 
-                                // 2. CEK: Jika tidak ada error ATAU jika email sudah ada (sudah terdaftar)
-                                // Kita anggap sukses dan langsung arahkan ke Home
                                 if (errorMessage == null || errorMessage.contains('email-already-in-use')) {
                                   Navigator.pushAndRemoveUntil(
                                     context,

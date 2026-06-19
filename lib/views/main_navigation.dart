@@ -14,7 +14,6 @@ class MainNavigation extends StatefulWidget {
 class _MainNavigationState extends State<MainNavigation> {
   int _currentIndex = 0;
 
-  // Hapus 'const' agar halaman bisa menerima update state dinamis
   final List<Widget> _screens = [
     const HomeScreen(),
     const LibraryScreen(), 

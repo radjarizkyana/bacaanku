@@ -27,12 +27,12 @@ class OrderHistoryScreen extends StatelessWidget {
         title: const Text('Pesanan Saya'),
         centerTitle: true,
       ),
-      // MENGAMBIL DATA PESANAN DARI FIRESTORE SECARA REAL-TIME
+
       body: StreamBuilder<QuerySnapshot>(
         stream: FirebaseFirestore.instance
             .collection('orders')
-            .where('userId', isEqualTo: user?.id) // HANYA TARIK PESANAN MILIK USER INI
-            .orderBy('createdAt', descending: true) // URUTKAN DARI YANG TERBARU
+            .where('userId', isEqualTo: user?.id) 
+            .orderBy('createdAt', descending: true) 
             .snapshots(),
         builder: (context, snapshot) {
           if (snapshot.connectionState == ConnectionState.waiting) {
@@ -111,7 +111,6 @@ class OrderHistoryScreen extends StatelessWidget {
                       width: double.infinity,
                       child: OutlinedButton(
                         onPressed: () {
-                          // TODO: Aksi lihat detail invoice lengkap
                         },
                         style: OutlinedButton.styleFrom(
                           side: const BorderSide(color: Colors.grey),

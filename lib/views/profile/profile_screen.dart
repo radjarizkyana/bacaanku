@@ -10,7 +10,6 @@ class ProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // 1. Ambil data user aktif
     final authVM = context.watch<AuthViewModel>();
     final user = authVM.currentUser;
 
@@ -32,13 +31,11 @@ class ProfileScreen extends StatelessWidget {
             ),
             const SizedBox(height: 15),
             
-            // 2. Tampilkan Nama Dinamis
             Text(
               user?.name ?? 'Nama Tidak Diketahui',
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             
-            // 3. Tampilkan Email Dinamis
             Text(
               user?.email ?? 'email@domain.com',
               style: const TextStyle(color: Colors.grey),
