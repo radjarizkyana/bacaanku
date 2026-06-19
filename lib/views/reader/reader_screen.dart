@@ -34,12 +34,10 @@ class _ReaderScreenState extends State<ReaderScreen> {
           IconButton(
             icon: const Icon(Icons.zoom_in),
             onPressed: () {
-              // Membuka UI untuk zoom (hanya berfungsi jika PDF mendukungnya)
             },
           ),
         ],
       ),
-      // MENGGUNAKAN URL DINAMIS YANG DIKIRIM DARI DETAIL BUKU
       body: SfPdfViewer.network(
         widget.pdfUrl, 
         key: _pdfViewerKey,

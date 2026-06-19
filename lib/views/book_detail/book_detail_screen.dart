@@ -75,7 +75,6 @@ class BookDetailScreen extends StatelessWidget {
             const SizedBox(height: 8),
             Text(author, style: const TextStyle(fontSize: 16, color: Colors.grey)),
             const SizedBox(height: 16),
-            // ... (Statistik dan Sinopsis tetap sama)
           ],
         ),
       ),
